@@ -116,7 +116,7 @@ public class RequestDAO implements RequestDAOInterface{
 	
 	
 	@Override
-	public void insertRequest(RequestDTO request, int ers_users_id, int reimb_status_id, int reimb_type_id) {
+	public void insertRequest(RequestDTO request) {
 	
 		try(Connection conn = ConnectionUtil.getConnection()){
 		
@@ -131,10 +131,14 @@ public class RequestDAO implements RequestDAOInterface{
 		//fill in the values of our variables using ps.setXYZ()
 		ps.setInt(1, request.getReimb_amount());
 		ps.setString(2, request.getReimb_submitted());
+		ps.setInt(3, request.getUser());
+		ps.setInt(4, request.getStatus());
+		ps.setInt(5, request.getType());
+
+
+
+		
 	
-		ps.setInt(3, ers_users_id); 
-		ps.setInt(4, reimb_status_id); 
-		ps.setInt(5, reimb_type_id); 
 		//note how the DB role_id is an int, but in Java, Employees have a Role OBJECT
 		//this is my workaround of choice... have the user input the id of the desired role when inserting the user data
 		

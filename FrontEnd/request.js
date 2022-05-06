@@ -50,13 +50,13 @@ async function getRequests() {
 
            
             let cell4 = document.createElement("td");
-            cell4.innerHTML = request.user.ers_username;
+            cell4.innerHTML = request.user.user_first_name;
             row.appendChild(cell4);
             let cell5 = document.createElement("td");
-            cell4.innerHTML = request.status.reimb_status;
+            cell5.innerHTML = request.status.reimb_status;
             row.appendChild(cell5);
             let cell6 = document.createElement("td");
-            cell4.innerHTML = request.type.reimb_type;
+            cell6.innerHTML = request.type.reimb_type;
             row.appendChild(cell6);
 
             //append the tr (which we called "row") to the table body (tbody)

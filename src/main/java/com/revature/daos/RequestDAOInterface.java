@@ -26,7 +26,7 @@ public interface RequestDAOInterface {
 	//This method will return every employee from the database
 	ArrayList<Request> getRequests();
 	//This method will take in an employee object, and insert it into the database
-	void insertRequest(RequestDTO request, int ers_users_id, int reimb_status_id, int reimb_type_id);
+	void insertRequest(RequestDTO request);
 	//This method will return an employee which we'll get by their id
 	//Request getRequestById(int id) ;
 	

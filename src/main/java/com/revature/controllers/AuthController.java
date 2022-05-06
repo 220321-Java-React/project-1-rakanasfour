@@ -24,7 +24,7 @@ public class AuthController {
 		//with POST requests, we have some data coming in, which we access with ctx.body();
 		//body??? it means the BODY of the request... which is just the data the user sent.
 		String body = ctx.body();
-		
+		System.out.println(body);
 		//create a new GSON object to make Java <-> JSON conversions.
 		Gson gson = new Gson();
 		
@@ -51,7 +51,7 @@ public class AuthController {
 			
 		} else {
 			ctx.status(401); //401 stands for "unauthorized"
-			System.out.println("heyo login failed");
+			System.out.println("hey login failed");
 		}
 		
 		
