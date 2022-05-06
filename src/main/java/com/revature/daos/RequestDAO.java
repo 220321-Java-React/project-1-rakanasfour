@@ -63,6 +63,7 @@ public class RequestDAO implements RequestDAOInterface{
 						//this is an extra step we have to take because in the DB, the role_id_fk is an int
 						//but we need a Role object here
 					int userFK = rs.getInt("reimb_author_fk");
+		
 					User u = uDAO.getUserById(userFK);
 					req.setUser(u);
 					requestList.add(req);
@@ -154,6 +155,35 @@ public class RequestDAO implements RequestDAOInterface{
 		}
 		
 	} 
+	
+	/*
+	@Override
+	public void updateRoleSalary(String title, int salary) {
+	
+		try(Connection conn = ConnectionUtil.getConnection()){
+			
+			//write out our SQL UPDATE command
+			String sql = "update roles set role_salary = ? where role_title = ?";
+			
+			//create our PreparedStatement
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			//input the appropriate values into our PreparedStatement
+			ps.setInt(1, salary); //update the first ? with the int salary from the method arguments
+			ps.setString(2, title); //update the second ? with the String title from the method arguments
+			
+			//execute the update!!
+			ps.executeUpdate();
+			
+			//tell the user that the update was successful
+			System.out.println(title + " salary has been updated to: " + salary);
+			
+		} catch (SQLException e) {
+			System.out.println("Couldn't update :(");
+			e.printStackTrace();
+		}
+		
+	}
 
 	/*
 

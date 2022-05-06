@@ -57,50 +57,24 @@ if(response.status === 202 ){
      let data = await response.json();
      console.log(data);
      if (data.ers_username ==="Manager"){ 
-     window.location.replace("/RequestM.html");
-    }else{    window.location.replace("/Request.html");
+     window.location.replace("/Manager.html");
+    }else{    window.location.replace("/Employee.html");
 
 
     };
 
 
 
-/*     
-if(response.status === 202 ){
-window.location.replace("/Request.html");
-
-
-    //converting from json to JS
-    let data = await response.json();
-     
-    //wipe our login row and welcome the user
 
     
 
     //THIS IS PROBABLY WHERE YOUR REDIRECT WOULD BE IF USING MULTIPLE HTML PAGES
     //don't be intimidated, it's an easy google :)
-*/
+
 } else {
-    document.getElementById("welcomeHead").innerText="Login failed! Try Again";
+    document.getElementById("welcomeHead").innerText="Login failed! Try again!";
     document.getElementById("welcomeHead").style.color = "red";
 }
-/*
-if (positionE === Employee){
-        window.location.replace("/Request.html");
-        
-     }
-     else{
-        window.location.replace("/RequestM.html");
 
-     };
-
-     if (positionE === Employee){
-        
-     }
-     else{
-        window.location.replace("/RequestM.html");
-
-     };
-*/
 
 }

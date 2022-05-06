@@ -20,7 +20,7 @@ import com.revature.daos.UserDAO;
 import com.revature.models.Employee;
 
 public class KrustyTests {
-
+/*
 	UserDAO ud = new UserDAO();
 	EmployeeDAO ed = new EmployeeDAO();
 	RoleDAO rd = new RoleDAO();
@@ -60,5 +60,6 @@ public class KrustyTests {
 		assertNotSame(rd.getRoleById(1), rd.getRoleById(2));
 		assertNotSame(rd.getRoleById(3), rd.getRoleById(4));
 	}
+	*/
 	
 }

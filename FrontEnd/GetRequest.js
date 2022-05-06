@@ -18,6 +18,7 @@ async function getRequests() {
     if(response.status === 200) { //"if the response has a status code of 200..."
 
 
+
         //parse the JSON we get back into a JS object
         //.json() is the JS method that takes json and turns it into a JS object
         let data = await response.json();
@@ -48,16 +49,21 @@ async function getRequests() {
             cell3.innerHTML = request.reimb_submitted;
             row.appendChild(cell3);
 
-           
+
             let cell4 = document.createElement("td");
             cell4.innerHTML = request.user.user_first_name;
             row.appendChild(cell4);
+
             let cell5 = document.createElement("td");
-            cell5.innerHTML = request.status.reimb_status;
+            cell5.innerHTML = request.user.User_last_name;
             row.appendChild(cell5);
+
             let cell6 = document.createElement("td");
-            cell6.innerHTML = request.type.reimb_type;
+            cell6.innerHTML = request.status.reimb_status;
             row.appendChild(cell6);
+            let cell7 = document.createElement("td");
+            cell7.innerHTML = request.type.reimb_type;
+            row.appendChild(cell7);
 
             //append the tr (which we called "row") to the table body (tbody)
             //a new row will be appended FOR every employee that got returned in the fetch()
