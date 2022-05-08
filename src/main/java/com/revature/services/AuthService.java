@@ -24,4 +24,28 @@ public class AuthService {
 	}
 		//we would call the DAO method here, and use its results in the if/else below
 		//the DAO method would return whatever gets found in the DB (records with matching username/pass)
+		
+		//this is hardcoding - telling Java exactly what we want the username/password to be
+		//if(username.equals(userDAOB.getUsers()) && password.equals(userDAOB.getUsers())) {
+/*
+		if(username.equals("user") && password.equals("password")) {
+			System.out.println(username);
+		
+			
+			//empty Role object (no args constructor) just for simplicity here
+			User u = new User();
+			
+			Status s = new Status();
+			Type t = new Type();
+	
+
+			
+			return new Request(1, 100, "rakan",u,s,t);
+			
+		} else {
+			return null;
+		}
+		*/
+	
+
 }

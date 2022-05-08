@@ -51,7 +51,7 @@ public class AuthController {
 			
 		} else {
 			ctx.status(401); //401 stands for "unauthorized"
-			System.out.println("hey login failed");
+			System.out.println("heyo login failed");
 		}
 		
 		

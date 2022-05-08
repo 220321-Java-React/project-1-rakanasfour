@@ -42,9 +42,30 @@ public class UserDAO {
 		}
 	}
 
+	/*
+	//This method will return true in the case of successful login, otherwise it will return false
+	public boolean login(String username, String password) {
+		
+		if(username.equals("user") && password.equals("password")) {
+			return true;
+		}
+		
+		return false;
+		
+	}
+	
+	
+	}
+	*/
 	
 	
 	
+			
+			
+			
+		
+	
+
 		
 	
 	//Ok Ben hardcoded the credentials... thanks a lot...
